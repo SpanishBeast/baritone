@@ -72,7 +72,7 @@ public final class ChunkPacker {
                             bitSet.set(index, bits[0]);
                             bitSet.set(index + 1, bits[1]);
                             Block block = state.getBlock();
-                            if (CachedChunk.BLOCKS_TO_KEEP_TRACK_OF.contains(block)) {
+                            if (!CachedChunk.BLOCKS_TO_KEEP_TRACK_OF.contains(block)) {
                                 String name = BlockUtils.blockToString(block);
                                 specialBlocks.computeIfAbsent(name, b -> new ArrayList<>()).add(new BlockPos(x, y, z));
                             }

@@ -44,17 +44,17 @@ public final class Settings {
     /**
      * Allow Baritone to break blocks
      */
-    public final Setting<Boolean> allowBreak = new Setting<>(true);
+    public final Setting<Boolean> allowBreak = new Setting<>(false);
 
     /**
      * Allow Baritone to sprint
      */
-    public final Setting<Boolean> allowSprint = new Setting<>(true);
+    public final Setting<Boolean> allowSprint = new Setting<>(false);
 
     /**
      * Allow Baritone to place blocks
      */
-    public final Setting<Boolean> allowPlace = new Setting<>(true);
+    public final Setting<Boolean> allowPlace = new Setting<>(false);
 
     /**
      * Allow Baritone to move items in your inventory to your hotbar
@@ -72,7 +72,7 @@ public final class Settings {
     /**
      * If this setting is on, no auto tool will occur at all, not at calculation time nor execution time
      */
-    public final Setting<Boolean> disableAutoTool = new Setting<>(false);
+    public final Setting<Boolean> disableAutoTool = new Setting<>(true);
 
     /**
      * It doesn't actually take twenty ticks to place a block, this cost is so high
@@ -103,7 +103,7 @@ public final class Settings {
      * Allow Baritone to fall arbitrary distances and place a water bucket beneath it.
      * Reliability: questionable.
      */
-    public final Setting<Boolean> allowWaterBucketFall = new Setting<>(true);
+    public final Setting<Boolean> allowWaterBucketFall = new Setting<>(false);
 
     /**
      * Allow Baritone to assume it can walk on still water just like any other block.
@@ -550,7 +550,7 @@ public final class Settings {
      * Allow chat based control of Baritone. Most likely should be disabled when Baritone is imported for use in
      * something else
      */
-    public final Setting<Boolean> chatControl = new Setting<>(true);
+    public final Setting<Boolean> chatControl = new Setting<>(false);
 
     /**
      * Some clients like Impact try to force chatControl to off, so here's a second setting to do it anyway
@@ -658,7 +658,7 @@ public final class Settings {
      * <p>
      * SOLID is rendered as stone in the overworld, netherrack in the nether, and end stone in the end
      */
-    public final Setting<Boolean> renderCachedChunks = new Setting<>(false);
+    public final Setting<Boolean> renderCachedChunks = new Setting<>(true);
 
     /**
      * 0.0f = not visible, fully transparent (instead of setting this to 0, turn off renderCachedChunks)

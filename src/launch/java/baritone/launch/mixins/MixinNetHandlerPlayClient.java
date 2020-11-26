@@ -93,7 +93,7 @@ public class MixinNetHandlerPlayClient {
         if (!Baritone.settings().repackOnAnyBlockChange.value) {
             return;
         }
-        if (!CachedChunk.BLOCKS_TO_KEEP_TRACK_OF.contains(packetIn.getBlockState().getBlock())) {
+        if (CachedChunk.BLOCKS_TO_KEEP_TRACK_OF.contains(packetIn.getBlockState().getBlock())) {
             return;
         }
         for (IBaritone ibaritone : BaritoneAPI.getProvider().getAllBaritones()) {
@@ -125,7 +125,7 @@ public class MixinNetHandlerPlayClient {
         https://docs.oracle.com/javase/specs/jls/se7/html/jls-14.html#jls-14.15
         {
             for (SPacketMultiBlockChange.BlockUpdateData update : packetIn.getChangedBlocks()) {
-                if (CachedChunk.BLOCKS_TO_KEEP_TRACK_OF.contains(update.getBlockState().getBlock())) {
+                if (!CachedChunk.BLOCKS_TO_KEEP_TRACK_OF.contains(update.getBlockState().getBlock())) {
                     break https;
                 }
             }
